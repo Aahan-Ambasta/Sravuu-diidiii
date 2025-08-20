@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>An Evening with Sravu</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <meta name="theme-color" content="#4e86ff"/>
+</head>
+<body>
+
+  <!-- Floating emoji layer -->
+  <div class="emoji-layer" aria-hidden="true"></div>
+  <!-- Cursor trail canvas -->
+  <canvas id="cursor-trail"></canvas>
+
+  <!-- Progress UI -->
+  <div class="progress-ui" aria-hidden="true">
+    <div class="progress-bar"></div>
+    <ul class="progress-dots">
+      <li class="dot active"></li>
+      <li class="dot"></li>
+      <li class="dot"></li>
+      <li class="dot"></li>
+      <li class="dot"></li>
+      <li class="dot"></li>
+    </ul>
+  </div>
+
+  <!-- Audio toggle (optional) -->
+  <button class="audio-toggle" aria-label="Toggle ambient audio">🔊</button>
+  <audio id="ambient" loop preload="none">
+    <source src="assets/ambient.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Background gradient container -->
+  <div class="bg-gradient" aria-hidden="true"></div>
+  <div class="sparkles" aria-hidden="true"></div>
+
+  <main id="scenes">
+
+    <!-- Scene 0: Intro -->
+    <section class="scene intro" data-colors="#4e86ff,#92d5ff">
+      <div class="scene-inner center">
+        <h1 class="title">
+          An Evening with <span class="sravu">Sravu</span>
+        </h1>
+        <p class="tagline">Every sunset deserves a story — tonight, it’s yours… 🌆</p>
+        <div class="scroll-hint">Scroll to begin ↓</div>
+      </div>
+    </section>
+
+    <!-- Scene 1 -->
+    <section class="scene" data-colors="#4e86ff,#7fb3ff">
+      <div class="scene-inner alt">
+        <figure class="photo">
+          <img src="assets/Image1.jpg" alt="Sravu — moment 1">
+        </figure>
+        <div class="copy">
+          <h2 class="line" data-words="Like  this  moment,  you’re  impossible  to  scroll  past  💙"></h2>
+          <p class="personal-msg">When we first met i didnt think we would come this far that i would be making these things for you but here we are from deathball to chained together to blox fruit our journey never ends and still goes to this days.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scene 2 -->
+    <section class="scene" data-colors="#5a94ff,#9ed0ff">
+      <div class="scene-inner">
+        <div class="copy">
+          <h2 class="line" data-words="Warning: eyes may linger here longer than medically advised 😏"></h2>
+          <p class="personal-msg">Even tho we dont talk i still got the same care and respect i did for you when we first met. Idk if its u or me but ur the kind of person that come's in ones life then its like a habbit to them like they cant forget u even if they tried and who in the right mind would even try to forget a beautiful person like you.</p>
+          <button class="burst-btn" aria-label="Tap for a surprise">tap for a surprise ✨</button>
+        </div>
+        <figure class="photo">
+          <img src="assets/Image2.jpg" alt="Sravu — moment 2">
+        </figure>
+      </div>
+    </section>
+
+    <!-- Scene 3 -->
+    <section class="scene" data-colors="#6aa2ff,#ffd28f">
+      <div class="scene-inner alt">
+        <figure class="photo">
+          <img src="assets/Image3.jpg" alt="Sravu — moment 3">
+        </figure>
+        <div class="copy">
+          <h2 class="line" data-words="You’re my favourite shade of evening light 🌆"></h2>
+          <p class="personal-msg">Just Look at thoese addictive eyes, once u see them if hard to take your eyes off, and even i always think that how can someone be so perfect like everyone makes mistakes but u ur different your mistakes are overcomed by your sweetness.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scene 4 (Cats) -->
+    <section class="scene cats" data-colors="#7ab0ff,#ffc1b6">
+      <div class="scene-inner">
+        <div class="copy">
+          <h2 class="line" data-words="Even the cats would agree — purrfection 🐈"></h2>
+          <p class="personal-msg">Just like a cat your cute ur always charming ur always the one to bring laughter in a room filled with sadness, just by listning to your voice anyone would smile and its just not that im saying these things to make u happy its true and it comes from my heart. Just seeing how much Crazy loves you u two are just perfect</p>
+        </div>
+        <figure class="photo">
+          <img src="assets/Image4.jpg" alt="Sravu — moment 4">
+        </figure>
+        <div class="cat-peek" aria-hidden="true">😺</div>
+        <div class="cat-peek right" aria-hidden="true">😻</div>
+      </div>
+    </section>
+
+    <!-- Scene 5 (Lemon) -->
+    <section class="scene lemon" data-colors="#8abaff,#ffe08f">
+      <div class="scene-inner alt">
+        <figure class="photo">
+          <img src="assets/Image5.jpg" alt="Sravu — moment 5">
+        </figure>
+        <div class="copy">
+          <h2 class="line" data-words="A little sour, a lot of sweet — just like your lemon juice 🍋🥤"></h2>
+          <p class="personal-msg">YOUR THE BEST SRAVUU DIIDII REMEMBER IT NEVER LET ANYONE I MEAN ANYONE MAKE YOU SAD ALWAYS KEEP SMILEING CUZ SEEING U SMILE MAKES EVERYONE HAPPY</p>
+        </div>
+        <div class="lemon-sun" aria-hidden="true">🍋</div>
+      </div>
+    </section>
+
+    <!-- Scene 6 (Finale) -->
+    <section class="scene finale" data-colors="#ff9d8f,#6b4cff">
+      <div class="scene-inner center">
+        <figure class="photo hero">
+          <img src="assets/Image6.jpg" alt="Sravu — moment 6" class="final-photo">
+        </figure>
+        <div class="copy center">
+          <h2 class="line" data-words="And here’s a view no sunset could beat… 🌇"></h2>
+          <p class="personal-msg">God knows ab hum log wapis phirse connect ho jayenge i still miss the old talks the old games we did together it was soo fun it has not been that fun that it was win yoou just cuz u were different you just had a happy vibe just a good feeling came talking to you. Even if you think all these are just typed msgs with no feeling i understand but im not like anyone esle who just does things to give someone sympathy. I always wanted to text u but i always stopped myself one cuz there are problem alone in ur life ur tyring you hand or god knows what not. Just Remember Sunshine You were the best one i met soo far THE BEST</p>
+        </div>
+        <div class="cat-walk" aria-hidden="true">🐈</div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
